@@ -1,0 +1,53 @@
+/*
+Do Y Loop
+19/03/2019
+Haeun Oh
+This is the do y loop
+The problem with this program there is a lot that can go wrong
+ */
+package causingdoyloop;
+import java.util.Scanner;
+
+public class CaUsingDoYloop {
+
+
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        
+        int intAge, intCount;
+        double dblSum, dblAvg;
+        
+        dblSum = 0.0;
+        intCount = 0;
+        
+        
+        do
+        {
+            System.out.print("Please enter age: ");
+            intAge = sc.nextInt();
+            
+            dblSum = dblSum + intAge;
+            intCount = intCount + 1;
+            
+        }while (intAge != 999);             //an error will occur in which they ask you to initialize age but instead if you 
+                                                   //add the age values it will solve this problem (line 25 & 26)
+                                            // you are allowed to enter a loop at least once
+      
+        // if (intCount !=1) //if (intCount !=0)                                    
+        if (intAge == 999)                  // CHANGE IN if STATEMENT CONDITION?  
+        {
+            dblAvg = dblSum / intCount;
+            
+                dblAvg = (dblSum - 999) / (intCount -1);
+                System.out.println("The average is: " + dblAvg);
+                }
+        else 
+        { 
+            System.out.println("I got nothing for you");
+        }
+                                        
+
+    }
+}
+    
+
